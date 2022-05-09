@@ -1,4 +1,14 @@
+import { useContext } from 'react';
+import AppContext from '../context/AppContext';
+
 function Comp3() {
-  return <div>Comp3</div>;
+  const { myAppData, displayData } = useContext(AppContext);
+
+  return (
+    <>
+      <h1>{myAppData[0].city}</h1>
+      {displayData()}
+    </>
+  );
 }
 export default Comp3;
