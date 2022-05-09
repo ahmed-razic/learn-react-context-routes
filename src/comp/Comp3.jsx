@@ -6,8 +6,8 @@ function Comp3() {
 
   return (
     <>
-      <h1>{myAppData[0].city}</h1>
-      {displayData()}
+      {/* <h1>{myAppData[0].city}</h1> */}
+      {/* {displayData()} */}
     </>
   );
 }
