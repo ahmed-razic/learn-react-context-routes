@@ -23,6 +23,7 @@ function Comp4() {
       >
         Change
       </button>
+      <hr />
     </div>
   );
 }
