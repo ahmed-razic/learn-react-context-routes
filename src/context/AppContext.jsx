@@ -13,14 +13,17 @@ export const AppProvider = function ({ children }) {
     ));
   };
 
-  setMyAppData([...myAppData, newItem]);
+  const setData = function (item) {
+    setMyAppData([...myAppData, item]);
+  };
 
   return (
     <AppContext.Provider
       value={{
         myAppData,
-        setMyAppData,
+        setData,
         displayData,
+        setMyAppData,
       }}
     >
       {children}

@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import AppContext from '../context/AppContext';
 
 function Comp4() {
-  const { setMyAppData, myAppData } = useContext(AppContext);
+  const { setData, myAppData, setMyAppData } = useContext(AppContext);
   const newItem = {
     id: 6,
     firstName: 'Ahmed-6',
@@ -10,7 +10,20 @@ function Comp4() {
     city: 'Zenica',
   };
 
-  console.log(myAppData);
-  return <div>Comp4</div>;
+  useEffect(() => {
+    console.log(myAppData);
+  }, [myAppData]);
+
+  return (
+    <div>
+      <button
+        onClick={function () {
+          setMyAppData([...myAppData, newItem]);
+        }}
+      >
+        Change
+      </button>
+    </div>
+  );
 }
 export default Comp4;
